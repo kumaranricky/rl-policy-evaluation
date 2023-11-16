@@ -18,6 +18,7 @@ The policy evaluation function takes as input a policy `pi`, the environment dyn
 ```python
 def policy_evaluation(pi, P, gamma=1.0, theta=1e-10):
     prev_V = np.zeros(len(P), dtype=np.float64)
+
     while True:
         V = np.zeros(len(P), dtype=np.float64)
         for s in range(len(P)):
@@ -29,7 +30,7 @@ def policy_evaluation(pi, P, gamma=1.0, theta=1e-10):
         prev_V = V.copy()
     return V
 ```
-# OUTPUT
+# <br>OUTPUT
 
 ![exp213](https://github.com/obedotto/rl-policy-evaluation/assets/75243072/b3aa0de3-b756-4cf6-afd9-274dd162ba2e)
 
